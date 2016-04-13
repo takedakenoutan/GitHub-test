@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <title>HTML 漢字テスト</title>
+</head>
+<body>
+<font size="5">漢字テスト</font>
+<br>
+<br>
+1問の漢字テストです
+<br>
+<p>
+<input type="button" value="テストを開始する" onclick="dia()">
+</p>
+
+<script type="text/javascript">
+function dia(){
+var kanjitest=[
+{"N":0,"q":"漢字","a":"かんじ"},
+{"N":1,"q":"考査","a":"こうさ"},
+{"N":2,"q":"道徳","a":"どうとく"},
+{"N":3,"q":"合戦","a":"がっせん"},
+{"N":4,"q":"大臣","a":"だいじん"},
+{"N":5,"q":"数学","a":"すうがく"},
+{"N":6,"q":"国語","a":"こくご"},
+{"N":7,"q":"社会","a":"しゃかい"},
+{"N":8,"q":"理科","a":"りか"},
+{"N":9,"q":"英語","a":"えいご"},
+{"N":10,"q":"体育","a":"たいいく"}
+];
+var Num=Math.floor(Math.random()*kanjitest.length);
+var str=kanjitest[Num].q;
+var result=prompt(str,"Answer");
+if(result){
+if(kanjitest[Num].a==result){
+alert("正解");
+}else{
+alert("不正解\n答えは["+kanjitest[Num].a+"]です");
+}
+}else{alert("テストを終了しました");}
+
+}
+</script>
+
+</body>
+</html>
